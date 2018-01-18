@@ -36,11 +36,22 @@ final class Request
         return self::$instance;
     }
 
-    private function __construct() {
+    /**
+     * Request constructor.
+     *
+     * @throws ApiException
+     */
+    private function __construct()
+    {
         $this->body = $this->getRequest();
     }
 
-    private function __clone() { }
+    /**
+     * @author WN
+     */
+    private function __clone()
+    {
+    }
 
     /**
      * @author WN
@@ -87,7 +98,6 @@ final class Request
         $body = json_decode($request, true);
 
         if (is_array($body)) {
-
             return $body;
         }
 
