@@ -98,7 +98,6 @@ final class Request
         $body = json_decode($request, true);
 
         if (is_array($body)) {
-
             return $body;
         }
 
